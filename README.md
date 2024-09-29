@@ -16,6 +16,7 @@ docker run -e SEARCH_URLS='my-search-url-1,my-search-url-2' -v results:/out libk
 ```
 
 The container will immediately scrape the given URLs, and then enter cron mode, scraping the URLs at 8 pm daily.
+The results will be saved to an SQLite database (`results/rightmove.db`) and a JSON file `results/rightmove.json`.
 
 See the [Configuration](#configuration) section for more information on the available settings.
 
@@ -65,4 +66,3 @@ The scraper can be configured by changing the settings in [settings.py](rightmov
 * `NO_DB`: If set to `1`, the scraper will not save the results to a database. Default: `0`.
 * `OUTPUT_JSON_PATH`: If set, the scraper will save the results to a JSON file with the given name. Default: `None`.
 * `LOG_FILE_PATH`: The path to the log file. Default: `rightmove.log`.
-
