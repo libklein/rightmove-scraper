@@ -1,0 +1,5 @@
+.scrapy/*
+*.db
+*.log
+*.pyc
+.venv
